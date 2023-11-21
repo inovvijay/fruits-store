@@ -1,0 +1,11 @@
+{
+  "cSpell.words": ["dataget", "gerater", "nimber", "retrun", "tahn", "vijay"],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:demo}/.cspell/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
+    }
+  }
+}
