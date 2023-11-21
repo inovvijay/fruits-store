@@ -4,16 +4,16 @@ const setLoginUserEmail = localStorage.getItem("loginUserEmail");
 const setLoginUserName = localStorage.getItem("loginUserName");
 const setLoginUserImage = localStorage.getItem("loginUserImage");
 
-const init = {
+/* const init = {
   userEmail: setLoginUserEmail ? JSON.parse(setLoginUserEmail) : null,
   userName: setLoginUserName ? JSON.parse(setLoginUserName) : null,
   userImage: setLoginUserImage ? JSON.parse(setLoginUserImage) : null
-};
-/* const init = {
+}; */
+const init = {
   userEmail: null,
   userName:  null,
   userImage: null
-}; */
+};
 
 export const UserDataReducer = (state = init, action) => {
   const { type, payload } = action;

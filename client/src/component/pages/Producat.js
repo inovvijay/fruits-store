@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Container, Button, Card, Row } from "react-bootstrap";
+import FruitNavbar from "../common/Fruit_Navbar";
 import FruitFooter from "../common/Fruit_Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -199,6 +200,11 @@ const Product = () => {
 
   return (
     <Container fluid>
+      <Row>
+      <div className="navbar_container">
+        <FruitNavbar />
+      </div>
+      </Row>
       <Row>
         <div className=" position-relative p-0 ">
           <img

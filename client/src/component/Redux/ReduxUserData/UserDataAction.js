@@ -1,26 +1,26 @@
 import * as types from "./UserDataActionType.js";
 
-export const loginUserEmail = (loginUserEmail) => {
-  localStorage.setItem("loginUserEmail", JSON.stringify(loginUserEmail));
+export const loginUserEmail = (payload) => {
+  localStorage.setItem("loginUserEmail", JSON.stringify(payload));
   return {
     type: types.GETUSEREMAIL,
-    payload: loginUserEmail
+    payload: payload
   };
 };
 
-export const loginUserName = (loginUserName) => {
-  localStorage.setItem("loginUserName", JSON.stringify(loginUserName));
+export const loginUserName = (payload) => {
+  localStorage.setItem("loginUserName", JSON.stringify(payload));
   return {
     type: types.GetUserName,
-    payload: loginUserName
+    payload: payload
   };
 };
 
-export const loginUserImage = (loginUserImage) => {
-  localStorage.setItem("loginUserImage", JSON.stringify(loginUserImage));
+export const loginUserImage = (payload) => {
+  localStorage.setItem("loginUserImage", JSON.stringify(payload));
   return {
     type: types.GETUSERIMAGE,
-    payload: loginUserImage
+    payload: payload
   };
 };
 

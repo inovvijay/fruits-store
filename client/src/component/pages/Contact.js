@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Container, Row, Button, Form } from "react-bootstrap";
+import FruitNavbar from "../common/Fruit_Navbar";
 import axios from "axios";
 
 const Contact = () => {
@@ -40,46 +41,59 @@ const Contact = () => {
   };
 
   return (
-    <div style={backgroundStyle}>
-      <Form style={formContainerStyle}>
-        <Form.Group className="mb-3">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Name"
-            value={Name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Phone Number</Form.Label>
-          <Form.Control
-            type="number"
-            placeholder="Phone Number"
-            value={PhoneNumber}
-            onChange={(e) => {
-              setPhoneNumber(e.target.value);
-            }}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email Address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
-            value={Email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit" onClick={HandleSubmitContact}>
-          Submit
-        </Button>
-      </Form>
-    </div>
+    <Container fluid>
+      <Row>
+        <div className="navbar_container">
+          <FruitNavbar />
+        </div>
+      </Row>
+      <Row>
+        <div style={backgroundStyle}>
+          <Form style={formContainerStyle}>
+            <Form.Group className="mb-3">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Name"
+                value={Name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Phone Number</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Phone Number"
+                value={PhoneNumber}
+                onChange={(e) => {
+                  setPhoneNumber(e.target.value);
+                }}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email Address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                value={Email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              />
+            </Form.Group>
+            <Button
+              variant="primary"
+              type="submit"
+              onClick={HandleSubmitContact}
+            >
+              Submit
+            </Button>
+          </Form>
+        </div>
+      </Row>
+    </Container>
   );
 };
 

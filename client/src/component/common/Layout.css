@@ -7,6 +7,7 @@
   height: 62px;
   min-height: 62px;
   max-height: 62px;
+  padding: 0;
 }
 .main_container {
   position: absolute;
@@ -62,25 +63,24 @@
 }
 
 .social-container {
-    background-color: orange !important ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-  
+  background-color: orange !important ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
 }
 
-.signin_btn:hover{
-    background-color: white !important;
+.signin_btn:hover {
+  background-color: white !important;
 }
 
-.siginbtn_btm{
-    background-color: white !important;
-    color: black !important;
+.siginbtn_btm {
+  background-color: white !important;
+  color: black !important;
 }
-.siginbtn_btm:hover{
-    background-color: orange !important ;
-    color: white !important;
+.siginbtn_btm:hover {
+  background-color: orange !important ;
+  color: white !important;
 }
 
 .form_container {

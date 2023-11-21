@@ -18,7 +18,6 @@ const FruitNavbar = () => {
   const reduxUserEmail = useSelector((state) => state.userData.userEmail);
   const reduxUserName = useSelector((state) => state.userData.userName);
   const reduxUserImage = useSelector((state) => state.userData.userImage);
- 
 
   console.log("<><>", reduxUserEmail, reduxUserName, reduxUserImage);
 
@@ -50,9 +49,15 @@ const FruitNavbar = () => {
         })
         .then((res) => {
           console.log(res.user);
-          dispatch(loginUserName(res.user.userName));
-          dispatch(loginUserEmail(res.user.email));
-          dispatch(loginUserImage(res.user.userProfile));
+          if (res.user.userName) {
+            dispatch(loginUserName(res.user.userName));
+          }
+          if (res.user.email) {
+            dispatch(loginUserEmail(res.user.email));
+          }
+          if (res.user.userProfile) {
+            dispatch(loginUserImage(res.user.userProfile));
+          }
         })
         .catch((err) => {
           console.log(err);
@@ -68,7 +73,7 @@ const FruitNavbar = () => {
       data-bs-theme="dark"
       className="  bg-body-dark  w-100 bg-body-dark "
     >
-      <Container>
+      <Container fluid>
         <span>
           <img
             src="/fruit_image/fruits store.jpg"

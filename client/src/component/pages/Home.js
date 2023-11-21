@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import "../common/Fruit_Footer.css";
 import { Container, Col, Row, Carousel, Button, Card } from "react-bootstrap";
+import FruitNavbar from "../common/Fruit_Navbar";
 import FruitFooter from "../common/Fruit_Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -120,6 +121,11 @@ const Home = () => {
   return (
     <Container fluid>
       <Row>
+        <div className="navbar_container p-0">
+          <FruitNavbar />
+        </div>
+      </Row>
+      <Row>
         <Carousel activeIndex={index} onSelect={handleSelect} className="p-0">
           <Carousel.Item>
             <img
@@ -223,7 +229,7 @@ const Home = () => {
         ))}
       </Row>
       <Row>
-        <Col xs={12}sm={12}md={6}lg={6}>
+        <Col xs={12} sm={12} md={6} lg={6}>
           <div className=" p-3">
             <img
               src="https://static-bebeautiful-in.unileverservices.com/fruits%20glow%20cover_0.jpg"
@@ -232,7 +238,7 @@ const Home = () => {
             />
           </div>
         </Col>
-        <Col xs={12}sm={12}md={6}lg={6}>
+        <Col xs={12} sm={12} md={6} lg={6}>
           <div className="p-3">
             <h2 className="">OUR VALUES : QUALITY AND RESPONSIVENESS</h2>
             <h4 className="mt-4">FRUITS STORE,an irreproachable quality</h4>

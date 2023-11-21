@@ -1,10 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import FruitFooter from "../common/Fruit_Footer";
+import FruitNavbar from "../common/Fruit_Navbar";
 
 const About = () => {
   return (
-    <Container fluid  >
+    <Container fluid>
+      <Row>
+        <div className="navbar_container">
+          <FruitNavbar />
+        </div>
+      </Row>
       <Row>
         <div className=" position-relative p-0 ">
           <img
@@ -39,7 +45,7 @@ const About = () => {
           </div>
         </Col>
       </Row>
-      <Row >
+      <Row>
         <Col xs={12} md={6}>
           <div className=" mb-4 ">
             <img

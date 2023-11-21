@@ -3,9 +3,11 @@ const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema(
   {
     userName: String,
-    userEmail: String,
+    googleId: String,
+    email: String,
     userPassword: String,
-    userPhoneNumber:Number
+    userPhoneNumber: Number,
+    userProfile: String
   },
   { timestamps: true }
 );
